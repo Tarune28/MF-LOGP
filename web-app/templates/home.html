@@ -1,0 +1,79 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Dimensionally reduced machine learning model for predicting single component octanol–water partition coefficients</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <a class="" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/mf-logp.appspot.com/o/WPI_Inst_Prim_FulClr.png?alt=media&token=3bd8fe93-405e-43eb-bae1-61c1a6323044" width="120px"></a>
+    <h3 classname="text-center" style="color: #A2A2A6"></h3>
+    <form class="form-inline">
+      
+      <img src="https://firebasestorage.googleapis.com/v0/b/mf-logp.appspot.com/o/dynamicsLab.png?alt=media&token=29580227-b420-402c-8eba-8d1cc3731999" width="200px">
+    </form>
+  </nav>
+  <div style="display: flex; background-size: cover; background-color: #606060;">
+    <span class="mx-auto my-auto py-5 text-center" style="padding-left: 100px; padding-right: 100px;">
+       <h2 class="text-center my-auto pt-5" style="color: white">Dimensionally reduced machine learning model for predicting single component octanol–water partition coefficients</h2>
+    <h6 class="text-center my-auto pb-5" style="color: rgb(185, 185, 185); font-style: italic;">A Companion Application</h6>
+    </span>
+   
+    <!-- <img class="img mx-auto" src="https://firebasestorage.googleapis.com/v0/b/mass-academy-sign-in-system.appspot.com/o/Y1cover.png?alt=media&token=c8a5e777-315e-48d8-9f11-fc4b31f94f47"> -->
+  </div>
+
+    <div class="mx-5">
+      <br><br>
+      <h4><span class="header mt-3 banner text-center">Abstract</span></h4>
+      <p>
+        MF-LOGP, a new method for determining a single component octanol–water partition coefficients (𝐿𝑜𝑔𝑃) is presented which uses molecular formula as the only input. Octanol–water partition coefficients are useful in many applications, ranging from environmental fate and drug delivery. Currently, partition coefficients are either experimentally measured or predicted as a function of structural fragments, topological descriptors, or thermodynamic properties known or calculated from precise molecular structures. The MF-LOGP method presented here differs from classical methods as it does not require any structural information and uses molecular formula as the sole model input. MF-LOGP is therefore useful for situations in which the structure is unknown or where the use of a low dimensional, easily automatable, and computationally inexpensive calculations is required. MF-LOGP is a random forest algorithm that is trained and tested on 15,377 data points, using 10 features derived from the molecular formula to make 𝐿𝑜𝑔𝑃 predictions. Using an independent validation set of 2713 data points, MF-LOGP was found to have an average 𝑅𝑀𝑆𝐸
+ = 0.77 ± 0.007, 𝑀𝐴𝐸
+ = 0.52 ± 0.003, and 𝑅2
+ = 0.83 ± 0.003. This performance fell within the spectrum of performances reported in the published literature for conventional higher dimensional models (𝑅𝑀𝑆𝐸
+ = 0.42–1.54, 𝑀𝐴𝐸
+ = 0.09–1.07, and 𝑅2
+ = 0.32–0.95). Compared with existing models, MF-LOGP requires a maximum of ten features and no structural information, thereby providing a practical and yet predictive tool. The development of MF-LOGP provides the groundwork for development of more physical prediction models leveraging big data analytical methods or complex multicomponent mixtures.
+      </p>
+    </div>
+
+    <form action = "/predict" method = "post" enctype="multipart/form-data" class="col text-center mt-5 justify-content-center">
+      <div class="row text-center justify-content-center">
+<div class="form-group col-4">
+      <label for="exampleFormControlTextarea1">Input</label>
+      <textarea type="file" name="text" class="form-control" id="exampleFormControlTextarea1" rows="8">{{input}}</textarea>
+    </div>
+    <div class="col-2 text-center align-middle mt-2 pt-5">
+      <button type="submit" class="btn btn-primary">Calculate</button>
+      <br><br>
+
+      <button class="btn btn-danger none"><a href="/clear" class="none" style="color: white!important;">Clear</a></button>
+      <br><br>
+      <button class="btn btn-success none">Export as CSV</button>
+    </div>
+    <div class="form-group col-4">
+      <label for="exampleFormControlTextarea1">Model Predictions</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" readonly>{{result}}</textarea>
+    </div>
+
+
+      </div>
+      
+    </form>
+    
+
+    <br>
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Web application built by 
+        <a class="text-dark" href="https://github.com/Tarune28">Tarun Eswar, 2023.</a>
+        <br>
+        Model developed by
+        <a class="text-dark" href="https://github.com/Tarune28">David Kenney, 2023.</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+</body>
+</html>

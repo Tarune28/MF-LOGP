@@ -1,0 +1,25 @@
+.banner {
+    background: #C41030;
+}
+
+.img {
+ 
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+}
+
+
+.none {
+  color: white!important;
+  text-decoration: none;
+}
+.none:hover {
+  color: white;
+  text-decoration: none!important;
+}
+.none:focus {
+  color: white;
+  text-decoration: none!important;
+}
