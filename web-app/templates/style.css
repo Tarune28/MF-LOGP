@@ -23,3 +23,41 @@
   color: white;
   text-decoration: none!important;
 }
+
+.px-c {padding-left:15rem!important}
+
+
+.page-footer {
+  background-color: #1c1c1c!important;
+  color: #000000;
+  padding: 20px 0;
+  position: relative;
+bottom: 0;
+width: 100%;
+
+}
+.none {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  left: -500px;
+}
+
+
+.list-unstyled li a {
+  color: white!important;
+  text-decoration: none;
+}
+
+.footer-copyright {
+  color: white;
+}
+
+.list-unstyled {
+  display: inline-block!important;
+}
+
+
+li {
+  list-style-type: none;
+}
