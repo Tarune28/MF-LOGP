@@ -12,6 +12,8 @@ import chemparse as cp
 import sys
 import csv
 import datetime
+from datetime import date
+import time
 
 # Create flask instance
 app = Flask(__name__)
@@ -36,7 +38,7 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def home():
 
-    return render_template('home.html', input="CH4\nC2H6\nC3H8", result="1.1195000000000048, 1.7437357142857053, 2.2047773809523705")
+    return render_template('home.html', input="CH4\nC2H6\nC3H8", result="1.120, 1.744, 2.205")
 
 @app.route("/csvDownload", methods = ['GET', 'POST'])
 def csvDownload():
@@ -45,11 +47,12 @@ def csvDownload():
     result = request.form["result"]
     result = [x.strip() for x in result.split(',')]
     input = [x.strip() for x in input.split('\n')]
-    name = 'csv-storage/predictions' + str(datetime.datetime.fromtimestamp(0)) + '.csv'
+    name = 'csv-storage/predictions' + str(time.time()) + '.csv'
     print(result)
     with open(name, 'w') as csvfile:
             filewriter = csv.writer(csvfile, delimiter=',',
                                     quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            filewriter.writerow(["Input", "Result"])
             for i in range(len(input)):
                 print(result[i])
                 filewriter.writerow([str(input[i]), str(result[i])])
@@ -144,7 +147,7 @@ def predict():
                         sys.exit('Incompatible Formula')   
                 
                 compound_prediction = scale_y.inverse_transform((MFLOGP.predict(pd.DataFrame(scale_X.transform(compound),columns = elements))).reshape(-1,1))
-                results.append(compound_prediction[0][0])
+                results.append("{:.3f}".format(compound_prediction[0][0]))
 
         # elif compound_list:
             

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <nav class="navbar navbar-expand-lg navbar-light justify-content-between" style="background-color: #cfcfcf;">
     <img src="https://firebasestorage.googleapis.com/v0/b/mf-logp.appspot.com/o/WPI_Inst_Prim_FulClr.png?alt=media&token=3bd8fe93-405e-43eb-bae1-61c1a6323044" width="120px" class="mx-3">
 
 
@@ -28,7 +28,7 @@
       <br><br>
       <h4><span class="header mt-3 banner">Overview</span></h4>
       <p>
-        This is a companion application for the Molecular Formula LOGP (MF-LOGP) algorithm that can predict single component partition coefficients for organic compounds simply with its molecular formula. Click <a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-022-00660-1" target="0">here</a> to see the full published article in the Journal of Cheminformatics.
+        This is a companion application for the Molecular Formula LOGP (MF-LOGP) algorithm that can predict single component partition coefficients for organic compounds simply with its molecular formula. Click <a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-022-00660-1" target="0" style="color: #C3102F">here</a> to see the full published article in the Journal of Cheminformatics.
 
       </p>
       <br>
@@ -37,7 +37,7 @@
         To use the web application, please type the formula of interest into the "Molecular Formula Input" box. To seperate multiple molecular formula, please use a single line for each unique molecular formula entry. Once all formulas are formated properly, press "Calculate" to run the MF-LOGP algorithm. The "Clear" button will remove all entries, and the "Export as CSV" will export the imported formulas and calculated partition coefficients as a table within a csv file.
       </p>
       <br>
-      <p>For all questions, contact Dr. Andrew Teixeira at <a href="mailto:arteixeira@wpi.edu">arteixeira@wpi.edu</a>.</p>
+      <p>For all questions, contact Dr. Andrew Teixeira at <a href="mailto:arteixeira@wpi.edu" style="color: #C3102F">arteixeira@wpi.edu</a>.</p>
     </div>
 
     <form method = "post" enctype="multipart/form-data" class="col text-center mt-5 justify-content-center">
@@ -47,12 +47,12 @@
       <textarea type="file" name="text" class="form-control" id="exampleFormControlTextarea1" rows="8" cols="40" style="white-space: nowrap; overflow-y: hidden;">{{input}}</textarea>
     </div>
     <div class="col-2 text-center align-middle mt-2 pt-5">
-      <button type="submit" class="btn btn-primary" formaction="/predict">Calculate</button>
+      <button type="submit" class="btn btn-secondary" formaction="/predict">Calculate</button>
       <br><br>
 
       <button class="btn btn-danger none"><a href="/clear" class="none" style="color: white!important;">Clear</a></button>
       <br><br>
-      <button class="btn btn-success none" formaction="/csvDownload">Export as CSV</button>
+      <button class="btn btn-dark none" formaction="/csvDownload">Export as CSV</button>
     </div>
     <div class="form-group col-3">
       <label for="exampleFormControlTextarea1">Model Predictions</label>
