@@ -5,6 +5,8 @@ A companion application for the Molecular Formula LOGP (MF-LOGP) algorithm made 
 For all questions, contact Dr. Andrew Teixeira at arteixeira@wpi.edu.
 <br>
 
+API Documentation: https://documenter.getpostman.com/view/21582686/2s9Xy3srDe <br>
+
 Visit https://github.com/TeixeiraResearchLab/MF-LOGP_Development- for more information.
 
 Application built by Tarun Eswar | Model developed by David Kenney
